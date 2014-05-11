@@ -5,11 +5,14 @@ function addItem() {
 
     var newTextInput = document.getElementById("input1").value;
 
-    // below, we will give additional attributes to <li> element, so it's crated read with the onclick function and has an unique id, created with help of the counter above
+    // below, we will give additional attributes to <li> element, so it's created ready with the onclick function and has an unique id, created with help of the counter above
     var newListItem = document.getElementById("orderedlist").innerHTML += "<li id=" + liId + " onclick='chooseFunction(id)'>" + newTextInput + "</li>";
 
     // set additional attributes, because we can
     document.getElementById(liId).setAttribute("style", "");
+
+    //clear the text input box
+    document.getElementById("input1").value = "";
 
     // increment the counter each time an item is created, so the next item gets a unique id
     counter++;
